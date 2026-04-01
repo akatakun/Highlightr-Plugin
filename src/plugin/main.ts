@@ -11,6 +11,12 @@ import { createHighlighterIcons } from "src/icons/customIcons";
 import { createStyles } from "src/utils/createStyles";
 import { EnhancedApp, EnhancedEditor } from "src/settings/types";
 
+function generateHlId(): string {
+  const ts = Date.now().toString(36);
+  const rand = Math.random().toString(36).substring(2, 6);
+  return `${ts}-${rand}`;
+}
+
 export default class HighlightrPlugin extends Plugin {
   app: EnhancedApp;
   editor: EnhancedEditor;
@@ -80,7 +86,8 @@ export default class HighlightrPlugin extends Plugin {
         const selectedText = editor.getSelection();
         const curserStart = editor.getCursor("from");
         const curserEnd = editor.getCursor("to");
-        const prefix = command.prefix;
+        const hlId = generateHlId();
+        const prefix = command.prefix.replace(">", ` data-hlid="${hlId}">`);
         const suffix = command.suffix || prefix;
         const setCursor = (mode: number) => {
           editor.setCursor(
