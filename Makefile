@@ -1,4 +1,4 @@
-VAULT_PLUGIN_DIR := ~/Obsidian\ Vault/.obsidian/plugins/highlightr-plugin
+VAULT_PLUGIN_DIR := ~/Obsidian\ Vault/.obsidian/plugins/highlightr-plugin-custom
 
 .PHONY: build deploy clean
 
