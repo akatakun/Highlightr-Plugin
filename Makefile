@@ -1,8 +1,14 @@
-VAULT_PLUGIN_DIR := ~/Obsidian\ Vault/.obsidian/plugins/highlightr-plugin
+VAULT_PLUGIN_DIR := ~/Obsidian\ Vault/.obsidian/plugins/highlightr-plugin-custom
 
-.PHONY: build deploy clean
+.PHONY: install build deploy clean
 
-build:
+install:
+	npm install
+
+node_modules:
+	npm install
+
+build: node_modules
 	npm run build
 
 deploy: build
