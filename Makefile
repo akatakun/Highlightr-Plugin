@@ -13,7 +13,7 @@ build: node_modules
 
 deploy: build
 	mkdir -p $(VAULT_PLUGIN_DIR)
-	cp main.js manifest.json styles.css $(VAULT_PLUGIN_DIR)/
+	cp main.js manifest.json styles.css data.json $(VAULT_PLUGIN_DIR)/
 
 clean:
 	rm -f main.js

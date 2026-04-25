@@ -1,0 +1,14 @@
+{
+  "highlighterStyle": "none",
+  "highlighterMethods": "inline-styles",
+  "highlighters": {
+    "Yellow": "#FFF3A3A6",
+    "Sea": "#20948B",
+    "Orange": "#DE7A22"
+  },
+  "highlighterOrder": [
+    "Yellow",
+    "Sea",
+    "Orange"
+  ]
+}

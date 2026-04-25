@@ -10,9 +10,6 @@ package-lock.json
 main.js
 *.js.map
 
-# obsidian
-data.json
-
 .history
 
 .DS_Store
